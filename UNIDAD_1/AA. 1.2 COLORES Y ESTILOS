@@ -1,1 +1,43 @@
+function setup() {
+  createCanvas(400, 400);
+}
 
+function draw() {
+
+  background(255, 204, 242);
+  fill(255, 51, 204);
+  stroke(0, 0, 204);
+  strokeWeight(3);
+  
+  //figura de la cabeza
+  fill(255, 51, 204);
+  rect(100,100,200,200);
+
+  fill(172, 157, 172,100)
+  rect(120, 210, 160, 65)
+  //cambio del color en el pincel
+  
+  fill(255,255,255);
+  strokeWeight(2);
+
+  //ojos 
+  
+  noFill();
+  ellipse(150,160,40,40);
+  ellipse(250,160,40,40);
+
+  //pupilas
+  fill(0);
+  ellipse(150,160,15,15);
+  ellipse(250,160,15,15);
+  
+  //boca
+  strokeWeight(4)
+  line(150,240,250,240);
+
+    //nariz
+  noStroke();
+  fill(230,126,34);
+  strokeWeight(1)
+  triangle(200,180,185,210,215,210);
+}
