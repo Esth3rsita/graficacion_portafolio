@@ -42,7 +42,7 @@ main {
     background: var(--card-bg);
     border-radius: 8px;
     padding: 1.5rem;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 6px rgba(255, 0, 0, 0.6);
     border-top: 4px solid var(--primary-color);
 }
 
