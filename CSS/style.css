@@ -42,7 +42,7 @@ main {
     background: var(--card-bg);
     border-radius: 8px;
     padding: 1.5rem;
-    box-shadow: 0 4px 6px rgba(255, 0, 0, 0.6);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0, 0.5);
     border-top: 4px solid var(--primary-color);
 }
 
@@ -50,7 +50,7 @@ main {
     display: inline-block;
     margin-top: 1rem;
     padding: 0.5rem 1rem;
-    background-color: var(--secundary-color);
+    background-color: var(--primary-color);
     color: white;
     text-decoration: none;
     border-radius: 4px;
