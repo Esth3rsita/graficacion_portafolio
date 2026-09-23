@@ -1,1 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas Auto</title>
+</head>
+<body> 
+    <canvas id="miCanvas" width="400" height="400" style="border: 1px solid #000;"
+    ></canvas>
+    <script>
+        //aqui obtendremos el ñienzo y pondremos que es 2d
+        const canvas = document.getElementById("miCanvas");
+        const ctx = canvas.getContext("2d");
 
+        //Se empieza el auto con un rectángulo
+        ctx.fillStyle = "#ff4da6";
+        ctx.fillRect(100, 200, 200,80); 
+        ctx.lineWidth = 1; 
+        ctx.strokeRect(100,200,200,80);
+        
+        //techo del auto
+        ctx.fillStyle = "#ff3399";
+        ctx.fillRect(140,150, 120,50);
+        ctx.lineWidth = 1;
+        ctx.strokeRect(140,150,120,50);
+
+        //Ventanas
+        ctx.fillStyle = "#ffe6ff";
+        ctx.fillRect(150, 160, 40, 30); 
+
+        ctx.fillStyle = "#ffe6ff";
+        ctx.fillRect(210, 160, 40, 30);
+
+        //Llantas, se pone beginpath para abrir la funcion de circulo
+        ctx.beginPath();
+        ctx.arc(150, 280, 30, 0, Math.PI*2);
+        ctx.fillStyle = "#000000";
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.arc(250, 280, 30, 0, Math.PI*2);
+        ctx.fillStyle = "#000000";
+        ctx.fill();
+
+    </script>
+</body>
+</html>
