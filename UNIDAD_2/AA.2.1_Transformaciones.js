@@ -1,6 +1,7 @@
 function setup() {
-  createCanvas(650, 200);
+  createCanvas(600, 200);
   angleMode(DEGREES);
+  rectMode(CENTER); 
 }
 
 function draw() {
@@ -14,7 +15,7 @@ function draw() {
   drawPanda(color(255, 230, 230), 4, color(180, 120, 120), 'bebe');
   pop();
 
-  // PANDA NIÑO
+  //Panda Niño
   push();
   translate(170, 100);
   scale(1.1);
@@ -22,7 +23,7 @@ function draw() {
   drawPanda(color(255, 250, 245), 8, color(80, 80, 80), 'paleta');
   pop();
 
-  // PANDA JOVEN
+  //Panda Joven
   push();
   translate(290, 100);
   scale(1.4);
@@ -30,7 +31,7 @@ function draw() {
   drawPanda(color(255, 255, 255), 12, color(30, 30, 30), 'lentes');
   pop();
 
-  //PANDA ADULTO
+  //Panda Adulto 
   push();
   translate(420, 100);
   scale(1.7);
@@ -38,7 +39,7 @@ function draw() {
   drawPanda(color(255, 255, 255), 16, color(0, 0, 0), 'bigote');
   pop();
 
-  // PANDA VIEJO
+  //Panda Viejillo 
   push();
   translate(540, 100);
   scale(2.0);
@@ -46,80 +47,79 @@ function draw() {
   drawPanda(color(200, 200, 200), 20, color(100, 100, 100), 'viejo');
   pop();
 }
-//DETALLES POR ETAPA
+//centrar 0,0
 function drawPanda(colPiel, tamMancha, colMancha, etapa) {
+  // Aislamiento de estilos de bordes
   stroke(0);
   strokeWeight(2);
 
-  // 1. Orejas
+  //Orejas
   fill(colMancha);
   ellipse(-16, -18, tamMancha, tamMancha);
   ellipse(16, -18, tamMancha, tamMancha);
 
-  // 2. Cabeza Principal
+  //Cabeza Principal
   fill(colPiel);
   ellipse(0, 0, 40, 35);
 
- 
   if (etapa !== 'lentes') {
     fill(colMancha);
     ellipse(-10, -3, tamMancha * 0.8, tamMancha * 0.9);
     ellipse(10, -3, tamMancha * 0.8, tamMancha * 0.9);
 
-    // Ojitos
+    // Ojitos 
     fill(255);
     ellipse(-10, -3, 3, 3);
     ellipse(10, -3, 3, 3);
   }
 
-  // 4. CARITA Y NARIZ 
+  // 4. Carita y nariz
   fill(255);
-  noStroke();
+  stroke(0);
+  strokeWeight(2);
   ellipse(0, 5, 14, 10);
 
-  stroke(0);
-  strokeWeight(1.5);
   fill(colMancha);
   ellipse(0, 3, 6, 4); // Nariz
 
+  //accesorios
 
-  // PANDA NIÑO
+  //Paleta
   if (etapa === 'paleta') {
-    stroke(120, 80, 40); // Palito de madera
+    stroke(120, 80, 40); // Palito
     strokeWeight(2);
     line(8, 8, 14, 18);
     
     stroke(0);
     strokeWeight(1);
-    fill(255, 50, 80); //Paleta 
+    fill(255, 50, 80); // bolita de la paleta
     ellipse(14, 18, 10, 10);
   }
 
-  // PANDA JOVEN
+  //lentes
   if (etapa === 'lentes') {
     fill(0);
     stroke(0);
-    //LENTES
-    rectMode(CENTER);
+    strokeWeight(1);
     rect(-10, -3, 14, 10, 2);
     rect(10, -3, 14, 10, 2);
-    line(-3, -3, 3, -3); // Puente de los lentes
+    strokeWeight(2);
+    line(-3, -3, 3, -3); 
   }
 
-  //PANDA ADULTO
+  //Bigote
   if (etapa === 'bigote') {
     fill(0);
     noStroke();
-    // Dos pequeñas elipses/curvas que forman el bigote
     ellipse(-4, 8, 8, 4);
     ellipse(4, 8, 8, 4);
   }
 
-  // PANDA VIEJO
+  // Cejas para el panda viejillo
   if (etapa === 'viejo') {
     stroke(80);
     strokeWeight(2);
-    line(-14, -12, -6, -10); // Ceja izquierda
-    line(6, -10, 14, -12);  // Ceja derecha
+    line(-14, -12, -6, -10);
+    line(6, -10, 14, -12);
   }
 }
