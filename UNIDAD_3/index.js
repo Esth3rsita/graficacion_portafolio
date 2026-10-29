@@ -6,7 +6,7 @@
     <title>AA3.1: Primeros pasos con Three.js</title>
     <link rel="stylesheet" href="./style.css" />
 
-    <!-- Le indica al navegador de dónde cargar la librería Three.js -->
+ 
     <script type="importmap">
       {
         "imports": {
@@ -16,7 +16,7 @@
     </script>
   </head>
   <body>
-    <!-- Cambia "./index.js" por el nombre exacto de tu archivo .js si es diferente -->
+    
     <script type="module" src="./index.js"></script>
   </body>
 </html>
