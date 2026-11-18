@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Para que el padding y el margin no afecten al tamaño de los elementos */
+
+}
+html, body{
+    height: 100%;
+    width: 100%;
+    background-color: #8253c4;
+}
+
+#canvas{
+    display: block; /*bloques uno sobre otro*/
+    width: 100%; /* Para que el canvas ocupe todo el ancho de la ventana */
+    height: 100%;
+    overflow: hidden; /* Para que no aparezcan barras de desplazamiento */
+}
